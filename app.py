@@ -3,8 +3,9 @@ import os
 app = Flask(__name__)
 
 @app.route('/defuse/<code>')
-def checkCode(code):
+def checkCode(code=None):
 	answers = os.getenv('answercodes')
-	if code in "123":
-		return 'correct code - {0} and answers - {1}'.format(code,answers)
-	return 'incorrect'
+	if code in answers:
+		return 'correct, MH:next'
+	else:
+		return 'incorrect'
