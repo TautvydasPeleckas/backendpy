@@ -8,6 +8,9 @@ def checkCode(code=None):
 	code = args.get('code')
 	answers = os.getenv('answercodes')
 	result = os.getenv('answerresult')
+	print(code)
+	print('-')
+	print(answers)
 	if code == answers:
 		return result
 	else:
