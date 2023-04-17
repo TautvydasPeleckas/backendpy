@@ -14,4 +14,4 @@ def checkCode(code=None):
 	if code == answers:
 		return result
 	else:
-		return 'incorrect'
+		return 'TRY AGAIN...'
